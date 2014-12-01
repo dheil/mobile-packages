@@ -4,11 +4,16 @@
 
 <body>
   <h1>Photo Booth</h1>
-  <button>Take a Photo</button>
-
+  <button onclick="app.takePicture();">Take Picture</button>
+  <!--button>Take a new Photo</button-->
+  {{getPhotoCount}}
+  <br/>Bilder aus der MongoDB
+  {{> printPhotos}}
   {{#if photo}}
     <div>
       <img src={{photo}} />
     </div>
   {{/if}}
+  <script type="text/javascript">app.initialize();</script>
 </body>
+
